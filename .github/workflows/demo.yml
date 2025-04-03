@@ -16,4 +16,4 @@ jobs:
     if: github.event_name == 'push'
     runs-on: macos-latest
     steps:
-      - run: echo "This runs on pushes"
+      - run: echo "Thiss runs on pushes"

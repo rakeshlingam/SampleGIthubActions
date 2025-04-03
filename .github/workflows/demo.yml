@@ -1,0 +1,19 @@
+name: Demo
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  pull_request:
+    if: github.event_name == 'pull_request'
+    runs-on: macos-latest
+    steps:
+      - run: echo "This runs on pull requests"
+  push:
+    if: github.event_name == 'push'
+    runs-on: macos-latest
+    steps:
+      - run: echo "This runs on pushes"
